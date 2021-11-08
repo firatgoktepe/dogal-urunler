@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türetici Bakkal</title>
+      <!--Font Awesome CSS-->
+       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+
+    <header>
+        <nav class="nav">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="Türetici Bakkal">
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="urunlerimiz.html" class="nav-link">Ürünlerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ureticiagimiz.html" class="nav-link">Üretici Ağımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tureticiblogu.html" class="nav-link">Türetici Bloğu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim.html" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="top-social-menu">
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-toggler">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Slider Section -->
+    <section>
+            <div class="slider">
+            <img class="slider-img-top" src="img/slider-1.jpg" alt="">
+            </div>
+            <div class="slider-arrow">
+                <i class="fas fa-chevron-left fa-3x arrow"></i>
+                <i class="fas fa-chevron-right fa-3x arrow"></i>
+            </div>
+    </section>
+    <!-- End Slider Section -->
+    <section id="basic">
+            <div class="main">
+            <h1>Neden Türetici Bakkal?</h1>
+            <article>
+                Öncelikli amacımız emeği ve doğayı sömürmeyen, üretici ile tüketici arasında aracılar olmadan ve dayanışma temelli bir sistem oluştururak insanları sağlıklı gıdayla buluşturmaktır.
+            </article>
+            <p>ARACISIZ<br>
+            EMEK VE DOĞANIN SÖMÜRÜLMEDİĞİ<br>
+            DAYANIŞMA TEMELLİ<br>
+            HİÇBİR AŞAMASINDA KİMYASAL SÜREÇLERE MARUZ KALMAYAN<br>
+            DOĞAL VE SAĞLIKLI GIDALAR</p>
+            </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <ul class="footer-list">
+                     <li class="footer-item"><a href="index.html" class="footer-link">Neden Türetici Bakkal?</a></li>
+                     <li class="footer-item"><a href="ureticiagimiz.html" class="footer-link">Üreticileri Nasıl Seçiyoruz?</a></li>
+                     <li class="footer-item"><a href="tureticiblogu.html" class="footer-link">Türetici Bloğu Nedir?</a></li> 
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; Türetici Bakkal</p>
+            </div>
+            <div class="back-top">
+                <a href="#"><i class="fas fa-chevron-up"></i></a>
+            </div>
+        </div>
+</footer>
+
+    <!-- End Footer Section -->
+
+      <!-- Custom Js -->
+
+    <script>
+    
+/* Slider */
+var sld = [
+    {
+        name : 'slider-1', 
+        image : 'img/slider-1.jpg'
+    },
+    {
+        name : 'slider-2', 
+        image : 'img/slider-2.jpg'
+    },
+    {
+        name : 'slider-3', 
+        image : 'img/slider-3.jpg'
+    }
+];
+
+var index = 0;
+var slideCount = sld.length;
+var interval;
+var timer={
+    duration : '2400',
+    random : false
+}
+init(timer);
+
+document.querySelector('.fa-chevron-left').addEventListener('click',function(){
+    index--;
+    showSlide(index);
+})
+
+document.querySelector('.fa-chevron-right').addEventListener('click',function(){
+    index++;
+    showSlide(index);
+})
+
+document.querySelectorAll('.slider-img-top').forEach(function(item) {
+    item.addEventListener('mouseenter',function(){
+        clearInterval(interval);
+    })    
+})
+
+document.querySelectorAll('.slider-img-top').forEach(function(item) {
+    item.addEventListener('mouseleave',function(){
+        init(timer);
+    })    
+})
+function init(timer){
+    interval=setInterval(function(){
+        if(slideCount == index){
+            index = 0;
+        }
+        showSlide(index);
+        index++;
+    },timer.duration)
+}
+
+function showSlide(i){
+    index = i;
+    if(i<0){
+        index = slideCount - 1;
+    }
+    if(i>=slideCount){
+        index = 0;
+    }
+    document.querySelector('.slider-img-top').setAttribute('src', sld[index].image );
+}
+    </script>  
+
+    <script src="./js/script.js"></script>  
+</body>
+</html>
