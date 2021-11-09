@@ -46,5 +46,3 @@ function imageLoad() {
 	});
 	
 }
-
-imageLoad();
