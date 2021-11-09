@@ -93,30 +93,27 @@
             </div>
             <form action="https://formspree.io/f/xvodjyvq" method="POST">
               <label>
-                Ad-Soyad:
                 <input
                   class="form-control"
                   required
                   type="text"
                   name="name"
                   placeholder="Ad-Soyad"
-                  oninvalid="this.setCustomValidity('Lutfen isminizi giriniz!')"
+                  oninvalid="this.setCustomValidity('Lütfen isminizi giriniz!')"
                   oninput="this.setCustomValidity('')"
                 />
               </label>
               <label>
-                E-postaniz:
                 <input
                   class="form-control"
                   type="email"
                   name="_replyto"
-                  placeholder="Mail Adresiniz"
-                  oninvalid="this.setCustomValidity('Lutfen epostanizi giriniz!')"
+                  placeholder="E-Posta Adresiniz"
+                  oninvalid="this.setCustomValidity('Lütfen epostanizi giriniz!')"
                   oninput="this.setCustomValidity('')"
                 />
               </label>
               <label>
-                Konu:
                 <input
                   class="form-control"
                   type="text"
@@ -125,19 +122,19 @@
                 />
               </label>
               <label>
-                Mesajınız:
-                <input
+                <textarea
                   class="form-control"
+                  rows="5"
                   required
                   type="message"
                   name="message"
                   placeholder="Mesajınız"
-                  oninvalid="this.setCustomValidity('Lutfen mesajinizi giriniz!')"
-                  oninput="this.setCustomValidity('')"
-                />
+                  oninvalid="this.setCustomValidity('Lütfen mesajinizi giriniz!')"
+                  oninput="this.setCustomValidity('')">
+                </textarea>
               </label>
               <!-- your other form fields go here -->
-              <button type="submit">Gonder</button>
+              <button class="btn-general btn-light" type="submit">Gönder</button>
             </form>
           </div>
         </div>

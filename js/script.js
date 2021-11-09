@@ -47,29 +47,4 @@ function imageLoad() {
 	
 }
 
-
-/** Contact Form Validation **/
-
-function validate(){
-    if(document.valForm.name.value == ""){
-        alert('Adınızı yazınız');
-        return false;
-    }
-    if(document.valForm.email.value == ""){
-        alert('Mail adresinizi yazınız');
-        return false;
-    }
-    if(document.valForm.subject.value == ""){
-        alert('Konu başlığını yazınız');
-        return false;
-    }
-    if(document.valForm.message.value == ""){
-        alert('Mesajınızı yazınız');
-        return false;
-    }
-    if(document.valForm.submit.value == ""){
-        alert('Mesajınız başarıyla gönderildi');
-        return false;
-    }
-}
-
+imageLoad();
