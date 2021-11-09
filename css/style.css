@@ -775,7 +775,7 @@ details[open] #close {
   }
 
   .slider-arrow i {
-    margin-top: -19rem;
+    margin-top: -15rem;
   }
 
   .main p {
@@ -791,13 +791,17 @@ details[open] #close {
     width: 60%;
     margin-bottom: 2.4rem;
   }
+
+  .top-image img {
+    height: 35vh;
+  }
+
+  .slider-img-top {
+    height: 40vh;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .slider-arrow i {
-    margin-top: -11rem;
-  }
-
   .card-list {
     grid-template-columns: 1fr 1fr;
   }
