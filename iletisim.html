@@ -20,7 +20,7 @@
       <nav class="nav">
         <div class="navbar">
           <div class="logo">
-            <img src="./img/logo.png" alt="Türetici Bakkal" />
+            <a href="index.html"><img src="./img/logo.png" alt="Türetici Bakkal"/></a>
           </div>
           <ul class="nav-list">
             <li class="nav-item">
@@ -79,7 +79,7 @@
               <ul class="contact-social-menu">
                 <li>
                   <a href="#"><i class="fab fa-whatsapp"></i></a>&nbsp; <br>
-                  Whatsapp iletişim
+                  Whatsapp İletişim
                 </li>
                 <li>
                   <a href="#"><i class="fas fa-envelope"></i></a>&nbsp;<br>
@@ -93,45 +93,40 @@
             </div>
             <form action="https://formspree.io/f/xvodjyvq" method="POST">
               <label>
+                <span style="font-size: 1.4rem; font-family: var(--primary-font);">Ad-Soyad<span style="color: red; font-size: 1.8rem;" >&nbsp;*</span></span>
                 <input
                   class="form-control"
                   required
                   type="text"
                   name="name"
-                  placeholder="Ad-Soyad"
+                  placeholder=""
                   oninvalid="this.setCustomValidity('Lütfen isminizi giriniz!')"
                   oninput="this.setCustomValidity('')"
                 />
               </label>
               <label>
+                <span style="font-size: 1.4rem; font-family: var(--primary-font);">E-Posta Adresiniz<span style="color: red; font-size: 1.8rem;" >&nbsp;*</span></span>
                 <input
                   class="form-control"
                   type="email"
                   name="_replyto"
-                  placeholder="E-Posta Adresiniz"
+                  placeholder=""
                   oninvalid="this.setCustomValidity('Lütfen epostanizi giriniz!')"
                   oninput="this.setCustomValidity('')"
                 />
               </label>
               <label>
+                <span style="font-size: 1.4rem; font-family: var(--primary-font);">Konu</span>
                 <input
                   class="form-control"
                   type="text"
                   name="topic"
-                  placeholder="Konu"
+                  placeholder=""
                 />
               </label>
               <label>
-                <textarea
-                  class="form-control"
-                  rows="5"
-                  required
-                  type="message"
-                  name="message"
-                  placeholder="Mesajınız"
-                  oninvalid="this.setCustomValidity('Lütfen mesajinizi giriniz!')"
-                  oninput="this.setCustomValidity('')">
-                </textarea>
+                <span style="font-size: 1.4rem; font-family: var(--primary-font);">Mesajınız<span style="color: red; font-size: 1.8rem;" >&nbsp;*</span></span>
+                <textarea class="form-control" rows="5" required type="message" name="message" placeholder="" oninvalid="this.setCustomValidity('Lütfen mesajinizi giriniz!')" oninput="this.setCustomValidity('')"></textarea>
               </label>
               <!-- your other form fields go here -->
               <button class="btn-general btn-light" type="submit">Gönder</button>
