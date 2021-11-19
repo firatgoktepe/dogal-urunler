@@ -181,7 +181,6 @@ ul {
 }
 .arrow {
   color: transparent;
-  font-size: 5rem;
 }
 .arrow {
   color: #ffffff;
@@ -794,7 +793,7 @@ details[open] #close {
 
 @media only screen and (max-width: 768px) {
   .slider-arrow i {
-    margin-top: -11rem;
+    margin-top: -8rem;
   }
 
   .card-list {
