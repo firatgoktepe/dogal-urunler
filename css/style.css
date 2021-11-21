@@ -31,7 +31,7 @@ html {
 }
 
 section {
-  padding-top: 4rem;
+  padding-top: 8rem;
 }
 
 p {
@@ -821,7 +821,6 @@ details #close {
     padding-bottom: 5rem;
   }
   section#basic {
-    padding-top: 2rem;
     padding-bottom: 2rem;
   }
   .nav-item {
