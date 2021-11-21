@@ -31,7 +31,7 @@ html {
 }
 
 section {
-  padding-top: 8rem;
+  padding-top: 4rem;
 }
 
 p {
@@ -78,7 +78,7 @@ ul {
 
 .container {
   max-width: 114rem;
-  margin: 0 auto;
+  margin: 5% auto;
   width: 100%;
 }
 
@@ -530,14 +530,6 @@ section#basic {
 
 /** Blog **/
 
-.blog {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding: 0rem;
-  margin: 0rem;
-}
-
 .blog h1 {
   padding: 0;
   margin: 0;
@@ -634,8 +626,11 @@ details[open] #open {
 details #close {
   display: none;
 }
-details[open] #close {
-  display: block;
+
+@media screen and (max-width: 768px) {
+  details[open] #close {
+    display: block;
+  }
 }
 
 ::-webkit-details-marker {
@@ -824,6 +819,10 @@ details[open] #close {
   section.blog {
     padding-top: 8rem;
     padding-bottom: 5rem;
+  }
+  section#basic {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .nav-item {
     text-align: center;

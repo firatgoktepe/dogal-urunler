@@ -46,3 +46,23 @@ function imageLoad() {
 	});
 	
 }
+
+// function to add a class "open" to the details html tag only when the viewport of the browser is greater than 768px
+
+function openDetails() {
+	let details = document.querySelectorAll('details');
+	// loop over each details element
+	details.forEach(function(detail) {
+			// if the viewport is greater than 768px
+			if (window.innerWidth > 768) {
+				// add a class "open" 
+				detail.setAttribute("open", true);
+
+			}else {
+				// remove the class "open"
+				detail.removeAttribute("open");
+			}
+	});
+}
+
+openDetails();
