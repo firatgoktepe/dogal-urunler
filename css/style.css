@@ -512,14 +512,6 @@ ul {
 
 /** Blog **/
 
-.blog {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding: 0rem;
-  margin: 0rem;
-}
-
 .blog h1 {
   padding: 0;
   margin: 0;
@@ -555,10 +547,8 @@ ul {
   display: inline-block;
   width: 90%;
   max-width: 35rem;
-  height: 55rem;
   margin: 2rem;
   font-size: 1rem;
-  overflow: hidden;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s;
   border-radius: 1rem;
@@ -593,7 +583,7 @@ details[open] {
 details[open] summary {
   position: absolute;
   bottom: 0;
-  left: 10rem;
+  left: 11rem;
 }
 
 details #open {
@@ -612,10 +602,16 @@ details[open] #open {
 details #close {
   display: none;
 }
-details[open] #close {
-  display: block;
+
+details #close {
+  display: none;
 }
 
+@media screen and (max-width: 768px) {
+  details[open] #close {
+    display: block;
+  }
+}
 ::-webkit-details-marker {
   display: none;
 }
