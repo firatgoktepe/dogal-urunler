@@ -84,7 +84,7 @@ ul {
 
 .bg-image {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-  url("../img/bg1.jpg") center center no-repeat;
+    url("../img/bg1.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -434,7 +434,7 @@ ul {
   padding-bottom: 0.5rem;
 }
 
-.card-description h3{
+.card-description h3 {
   padding-bottom: 0.5rem;
   color: var(--secondary-color);
   font-size: 1.25rem;
@@ -455,7 +455,7 @@ ul {
 }
 
 .producer-item {
-  padding:0 1rem 0 1rem ;
+  padding: 0 1rem 0 1rem;
 }
 
 .producer h1 {
@@ -510,16 +510,7 @@ ul {
   margin: 0;
 }
 
-
 /** Blog **/
-
-.blog {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding: 0rem;
-  margin: 0rem;
-}
 
 .blog h1 {
   padding: 0;
@@ -556,10 +547,8 @@ ul {
   display: inline-block;
   width: 90%;
   max-width: 35rem;
-  height: 55rem;
   margin: 2rem;
   font-size: 1rem;
-  overflow: hidden;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s;
   border-radius: 1rem;
@@ -594,7 +583,7 @@ details[open] {
 details[open] summary {
   position: absolute;
   bottom: 0;
-  left: 10rem;
+  left: 11rem;
 }
 
 details #open {
@@ -613,10 +602,16 @@ details[open] #open {
 details #close {
   display: none;
 }
-details[open] #close {
-  display: block;
+
+details #close {
+  display: none;
 }
 
+@media screen and (max-width: 768px) {
+  details[open] #close {
+    display: block;
+  }
+}
 ::-webkit-details-marker {
   display: none;
 }
@@ -635,7 +630,7 @@ details[open] #close {
 /** Contact **/
 
 section#contact {
-  padding-bottom:8rem;
+  padding-bottom: 8rem;
 }
 
 .contact-item {
@@ -710,7 +705,6 @@ section#contact {
   color: var(--secondary-color);
   transition: var(--general-transition);
 }
-
 
 /** Media Queries **/
 
@@ -794,7 +788,7 @@ section#contact {
   .slider-img-top {
     height: 35vh;
   }
-  
+
   .round {
     margin-top: -16rem;
   }
@@ -806,6 +800,9 @@ section#contact {
 }
 
 @media only screen and (max-width: 720px) {
+  .card {
+    margin: 1rem auto;
+  }
   .card-list {
     grid-template-columns: 1fr;
     width: auto;
@@ -815,7 +812,7 @@ section#contact {
     grid-template-columns: 1fr;
   }
 
-  .producer-card-list{
+  .producer-card-list {
     grid-template-columns: 1fr;
   }
 
