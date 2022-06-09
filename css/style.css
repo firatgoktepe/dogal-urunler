@@ -657,6 +657,11 @@ section#contact {
   justify-content: space-around;
 }
 
+tbody {
+  margin: 0rem;
+  padding: 0rem;
+}
+
 .form-item img {
   width: 40%;
   margin: auto;
