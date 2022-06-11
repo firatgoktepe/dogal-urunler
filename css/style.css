@@ -657,9 +657,10 @@ section#contact {
   justify-content: space-around;
 }
 
-tbody {
-  margin: 0rem;
-  padding: 0rem;
+.form-check-label {
+  font-size: 1.4rem; 
+  font-family: var(--primary-font); 
+  font-weight: bold;
 }
 
 .form-item img {
