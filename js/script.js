@@ -67,13 +67,12 @@ function openDetails() {
 
 openDetails();
 
-
 // Toggle input check to respect with amount disable or enable
 
 function toggleCheckboxDisableOrEnableNearestInput() {
-	for(let i=1; i<=35; i++){
-		let checkbox = document.getElementById("check"+i)
-		let label_check = document.getElementById("label_check"+i)
+	for (let i = 1; i <= 35; i++) {
+		let checkbox = document.getElementById("check" + i)
+		let label_check = document.getElementById("label_check" + i)
 		label_check.setAttribute("disabled", true)
 		checkbox.addEventListener("click", function () {
 			label_check.toggleAttribute("disabled")
