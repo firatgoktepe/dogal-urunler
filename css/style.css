@@ -647,6 +647,33 @@ section#contact {
   margin-top: -14rem;
 }
 
+.form-content {
+  margin: 0 3rem;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-check-label {
+  font-size: 1.4rem; 
+  font-family: var(--primary-font); 
+  font-weight: bold;
+}
+
+.form-item img {
+  width: 40%;
+  margin: auto;
+  border-radius: 2rem;
+}
+
+.form-item img:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .form-control {
   background: none;
   border: none;
@@ -823,5 +850,14 @@ section#contact {
   .contact-item {
     display: flex;
     flex-direction: column;
+  }
+
+  .form-item {
+    flex-direction: column;
+  }
+
+  .form-item img {
+    width: 70%;
+    padding-bottom: 2rem;
   }
 }
