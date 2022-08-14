@@ -70,7 +70,8 @@ openDetails();
 // Toggle input check to respect with amount disable or enable
 
 function toggleCheckboxDisableOrEnableNearestInput() {
-	for (let i = 1; i <= 35; i++) {
+	let numberOfProducts = document.querySelectorAll('.product_length').length;
+	for (let i = 1; i <= numberOfProducts; i++) {
 		let checkbox = document.getElementById("check" + i)
 		let label_check = document.getElementById("label_check" + i)
 		label_check.setAttribute("disabled", true)
