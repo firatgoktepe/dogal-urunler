@@ -312,6 +312,17 @@ ul {
   height: auto;
 }
 
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.table-bordered{
+  border: 1px solid var(--secondary-color);
+}
+
 .footer-list {
 padding-top: 4rem;
 }
