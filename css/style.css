@@ -305,17 +305,25 @@ ul {
 /** Footer **/
 
 .footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  text-align: left;
   background-color: var(--light-color);
+  height: auto;
 }
 
 .footer-list {
+padding-top: 4rem;
+}
+
+.pay-cards{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 6rem;
+  justify-content: flex-start;
+}
+
+.pay-cards li{
+  margin-right: 1.5rem;
 }
 
 .footer-link {
@@ -356,7 +364,7 @@ ul {
 }
 
 .back-top {
-  justify-self: flex-end;
+  justify-self: center;
   text-align: center;
 }
 
@@ -769,12 +777,6 @@ section#contact {
     transform: translateX(0%);
   }
 
-  .footer-list {
-    flex-direction: column;
-    height: 10rem;
-    padding-bottom: 1rem;
-  }
-
   .card-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -816,6 +818,15 @@ section#contact {
 }
 
 @media only screen and (max-width: 720px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .pay-cards{
+    justify-content: center;
+  }
+
   .card {
     margin: 1rem auto;
   }
